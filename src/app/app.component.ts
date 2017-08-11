@@ -10,7 +10,7 @@ import { UserService } from 'app/service/user-service/user.service';
 export class AppComponent {
   title = 'app';
 
-  constructor(private userService: UserService) {
+  constructor() {
     const config = {
       apiKey: 'AIzaSyAp1qBAUpLR0xnfhHfvIUZdl6v_xnUu5C0',
       authDomain: 'lennybook-8fc79.firebaseapp.com',
@@ -20,6 +20,5 @@ export class AppComponent {
       messagingSenderId: '532157829641'
     };
     firebase.initializeApp(config);
-    userService.init();
   }
 }

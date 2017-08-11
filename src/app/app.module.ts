@@ -20,6 +20,8 @@ import { AlbumListItemComponent } from './admin-page/album-list-item/album-list-
 
 import { AlbumEditorPageComponent } from './album-editor-page/album-editor-page/album-editor-page.component';
 import { AlbumEditorComponent } from 'app/album-editor-page/album-editor/album-editor.component';
+
+import { Ng2FileDropModule } from 'ng2-file-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,7 @@ import { AlbumEditorComponent } from 'app/album-editor-page/album-editor/album-e
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MdDialogModule,
-    AppRoutingModule, MaterializeModule
+    AppRoutingModule, MaterializeModule, Ng2FileDropModule
   ],
   providers: [UserService, ShopService, AlbumService],
   bootstrap: [AppComponent],

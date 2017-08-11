@@ -1,3 +1,4 @@
+import { AlbumEditorComponent } from 'app/album-editor-page/album-editor/album-editor.component';
 import { AdminPageComponent } from './admin-page/admin-page/admin-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,7 +11,8 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'shop', component: ShopPageComponent },
   { path: 'login', component: LoginPageComponent },
-  { path: 'admin', component: AdminPageComponent }
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'editAlbum', component: AlbumEditorComponent }
 ];
 
 @NgModule({

@@ -5,10 +5,9 @@ import { User } from 'app/Model/User';
 export class UserService {
   currentFirebaseUser;
   currentUser: User;
+  initiated = false;
   constructor() {
 
-  }
-  init() {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.currentFirebaseUser = user;
@@ -27,9 +26,11 @@ export class UserService {
 
             });
           }
+          this.initiated = true;
         })
       } else {
         this.currentFirebaseUser = null;
+        this.initiated = true;
       }
     });
   }

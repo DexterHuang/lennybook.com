@@ -26,7 +26,7 @@ export class LoginPageComponent implements OnInit {
         dialog.title = 'Wellcome!';
         dialog.body = 'You will now be redicrected to the home page'
       }, 300);
-      this.router.navigate(['Home'])
+      this.router.navigate(['home'])
     }).catch(function (error) {
       console.log('something wrong happend', error);
     });

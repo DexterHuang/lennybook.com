@@ -44,4 +44,10 @@ export class UserService {
     this.currentFirebaseUser = null;
     this.currentUser = null;
   }
+  isAdmin() {
+    if (this.currentUser) {
+      return this.currentUser.isAdmin;
+    }
+    return false;
+  }
 }

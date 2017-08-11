@@ -7,20 +7,24 @@
       <i class="material-icons">menu</i>
     </a>
     <ul class="right hide-on-small">
-      <li> <a routerLink="/Home" routerLinkActive="active">Home</a></li>
-      <li> <a routerLink="/Shop" routerLinkActive="active">Shop</a></li>
+      <li> <a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li> <a routerLink="/shop" routerLinkActive="active">Shop</a></li>
       <li *ngIf="!userService.isLogedin()">
-        <a routerLink="/Login" routerLinkActive="active">Login</a></li>
+        <a routerLink="/login" routerLinkActive="active">Login</a></li>
       <li *ngIf="userService.isLogedin()">
         <a (click)="onClickLogOut()">Logout</a></li>
+      <li *ngIf="userService.isAdmin()">
+        <a routerLink="admin" routerLinkActive="active">Admin</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li> <a routerLink="/Home" routerLinkActive="active">Home</a></li>
-      <li> <a routerLink="/Shop" routerLinkActive="active">Shop</a></li>
+      <li> <a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li> <a routerLink="/shop" routerLinkActive="active">Shop</a></li>
       <li *ngIf="!userService.isLogedin()">
-        <a routerLink="/Login" routerLinkActive="active">Login</a></li>
+        <a routerLink="/login" routerLinkActive="active">Login</a></li>
       <li *ngIf="userService.isLogedin()">
         <a (click)="onClickLogOut()">Logout</a></li>
+      <li *ngIf="userService.isAdmin()">
+        <a routerLink="admin" routerLinkActive="active">Admin</a></li>
     </ul>
   </div>
 </nav>

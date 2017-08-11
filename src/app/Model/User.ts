@@ -3,4 +3,5 @@ export class User {
     photoURL: string;
     uid: string;
     email: string;
+    isAdmin = false;
 }

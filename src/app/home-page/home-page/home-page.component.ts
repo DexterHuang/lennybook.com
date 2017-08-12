@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private siteConfig: SiteConfigService) { }
+  constructor(public siteConfig: SiteConfigService) { }
 
   ngOnInit() {
   }

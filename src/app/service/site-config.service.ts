@@ -23,4 +23,10 @@ export class SiteConfigService {
   ready() {
     return this.initiated;
   }
+  getConfig(key: string) {
+    if (this.siteConfig) {
+      return this.siteConfig[key];
+    }
+    return undefined;
+  }
 }

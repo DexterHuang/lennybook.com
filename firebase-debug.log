@@ -1,0 +1,25 @@
+[debug] [2017-08-12T15:01:38.819Z] ----------------------------------------------------------------------
+[debug] [2017-08-12T15:01:38.822Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\jack2\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy --only hosting
+[debug] [2017-08-12T15:01:38.822Z] CLI Version:   3.9.2
+[debug] [2017-08-12T15:01:38.822Z] Platform:      win32
+[debug] [2017-08-12T15:01:38.822Z] Node Version:  v7.10.0
+[debug] [2017-08-12T15:01:38.823Z] Time:          Sat Aug 12 2017 23:01:38 GMT+0800 (Taipei Standard Time)
+[debug] [2017-08-12T15:01:38.823Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-12T15:01:38.836Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-12T15:01:38.836Z] > authorizing via signed-in user
+[debug] [2017-08-12T15:01:38.839Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/lennybook-8fc79  
+ Sat Aug 12 2017 23:01:38 GMT+0800 (Taipei Standard Time)
+[debug] [2017-08-12T15:01:39.832Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-12T15:01:39.833Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/lennybook-8fc79/tokens  
+ Sat Aug 12 2017 23:01:39 GMT+0800 (Taipei Standard Time)
+[debug] [2017-08-12T15:01:40.791Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'lennybook-8fc79'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2017-08-12T15:01:43.283Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/lennybook-8fc79/uploads/-KrLxlaAGsY3jnVpbXWj?fileCount=24&message=  
+ Sat Aug 12 2017 23:01:43 GMT+0800 (Taipei Standard Time)
+[debug] [2017-08-12T15:06:05.903Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-12T15:06:05.903Z] [hosting] .tgz uploaded successfully, waiting for extraction

@@ -9,4 +9,7 @@ export class SiteConfig {
     featuredPhoto3 = 'notSet';
     featuredOverLay3 = '';
     textSection3 = '';
+
+    shopPageTopPhoto = 'notSet';
+    loginPageTopPhoto = 'notSet';
 }

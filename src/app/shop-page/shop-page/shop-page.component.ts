@@ -1,3 +1,4 @@
+import { SiteConfigService } from './../../service/site-config.service';
 import { ShopService } from './../../service/shop-service/shop.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopPageComponent implements OnInit {
 
-  constructor(private shopService: ShopService) { }
+  constructor(private shopService: ShopService, public siteConfig: SiteConfigService) { }
 
   ngOnInit() {
   }

@@ -11,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./album-list.component.scss']
 })
 export class AlbumListComponent implements OnInit {
-  constructor(private albumService: AlbumService, private router: Router,
-    private userService: UserService) { }
+  constructor(public albumService: AlbumService, private router: Router,
+    public userService: UserService) { }
 
   ngOnInit() {
   }

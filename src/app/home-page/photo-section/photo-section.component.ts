@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PhotoSectionComponent implements OnInit {
   @Input() photoURL;
   @Input() overlay;
-
+  @Input() height = '500px'
   constructor() { }
 
   ngOnInit() {

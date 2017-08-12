@@ -1,3 +1,4 @@
+import { SiteConfigService } from './../../service/site-config.service';
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { MaterializeAction } from 'angular2-materialize';
@@ -14,7 +15,7 @@ export class LoginPageComponent implements OnInit {
 
   modalActions = new EventEmitter<string | MaterializeAction>();
   constructor(private dialog: MdDialog, private userService: UserService,
-    private router: Router) { }
+    private router: Router, public siteConfig: SiteConfigService) { }
 
   ngOnInit() {
   }

@@ -10,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlbumListItemComponent implements OnInit {
   @Input() album: Album;
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(public userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }

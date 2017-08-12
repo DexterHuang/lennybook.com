@@ -24,11 +24,12 @@ export class AlbumService {
     return a;
   }
   getAlbum(uid: string): Album {
+    let result = null;
     this.albums.forEach(a => {
       if (a.uid === uid) {
-        return a;
+        result = a;
       }
     })
-    return null;
+    return result;
   }
 }

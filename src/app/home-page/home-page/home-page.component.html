@@ -1,3 +1,32 @@
-<p>
-  home-page works!
-</p>
+<div class="wideScreen" *ngIf="siteConfig.ready()">
+  <div class="parallax-container valign-wrapper fullsize">
+    <div materialize="parallax" class="parallax">
+      <img src="{{siteConfig.siteConfig.coverBackgroudPhoto}}">
+    </div>
+    <div class="logo">
+      <h1>Lennybook
+      </h1>
+    </div>
+  </div>
+
+  <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto1"
+    [overlay]=siteConfig.siteConfig.featuredOverLay1></app-photo-section>
+
+  <div class="container text-section valign-wrapper">
+    <p>{{siteConfig.siteConfig.textSection1}}</p>
+  </div>
+
+  <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto2"
+    [overlay]=siteConfig.siteConfig.featuredOverLay2></app-photo-section>
+
+  <div class="container text-section valign-wrapper">
+    <p>{{siteConfig.siteConfig.textSection2}}</p>
+  </div>
+
+  <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto3"
+    [overlay]=siteConfig.siteConfig.featuredOverLay3></app-photo-section>
+
+  <div class="container text-section valign-wrapper">
+    <p>{{siteConfig.siteConfig.textSection3}}</p>
+  </div>
+</div>

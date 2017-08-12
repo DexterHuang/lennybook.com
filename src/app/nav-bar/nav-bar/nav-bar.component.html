@@ -1,12 +1,11 @@
 <nav class="blue darken-2">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Lennybook</a>
-    <a materialize="sideNav" href="#"
-      data-activates="mobile-demo"
-      class="button-collapse hide-on-med-and-up">
+    <span class="brand-logo left">Lennybook</span>
+    <span materialize="sideNav" data-activates="mobile-demo"
+      class="button-collapse hide-on-med-and-up right">
       <i class="material-icons">menu</i>
-    </a>
-    <ul class="right hide-on-small">
+    </span>
+    <ul class="right hide-on-small-and-down">
       <li> <a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li> <a routerLink="/shop" routerLinkActive="active">Shop</a></li>
       <li *ngIf="!userService.isLogedin()">
@@ -28,7 +27,4 @@
     </ul>
   </div>
 </nav>
-<div class="container ">
-
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

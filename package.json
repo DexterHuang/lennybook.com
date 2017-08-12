@@ -24,10 +24,12 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "angular2-materialize": "^15.1.7",
+    "blueimp-canvas-to-blob": "^3.11.0",
     "core-js": "^2.4.1",
     "firebase": "^4.2.0",
     "materialize-css": "^0.100.1",
     "ng2-file-drop": "^1.1.0",
+    "ng2-img-max": "^2.1.4",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

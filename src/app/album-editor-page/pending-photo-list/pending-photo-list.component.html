@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card blue-grey">
+    <div class="card-content white-text">
+      <span class="card-title">Pending uploads</span>
+      <div class="row">
+        <div *ngFor="let pendingPhoto of pendingPhotos">
+          <div class="col s6 m4 l2">
+            <app-pending-photo-list-item class="lighten-1"
+              [pendingPhoto]="pendingPhoto"
+              (click)="onClickItem($event)"></app-pending-photo-list-item>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

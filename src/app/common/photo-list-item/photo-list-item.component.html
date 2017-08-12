@@ -1,0 +1,14 @@
+<div class="z-depth-1">
+  <div *ngIf="showSetting">
+    <button (click)="onClickSetCover()"
+      class="waves-effect waves-teal btn-flat">  
+    <i class="material-icons"
+    [style.color]="isCover()? 'red' : ''">favorite_border</i>
+   </button>
+    <button (click)="onClickRemove()"
+      class="waves-effect waves-teal btn-flat">  
+    <i class="material-icons" >not_interested</i>
+   </button>
+  </div>
+  <img src="{{photo.photoUrl}}" />
+</div>

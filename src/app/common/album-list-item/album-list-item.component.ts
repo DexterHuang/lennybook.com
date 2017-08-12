@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { UserService } from 'app/service/user-service/user.service';
 import { Album } from './../../Model/Album';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -8,9 +10,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AlbumListItemComponent implements OnInit {
   @Input() album: Album;
-  constructor() { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
+  onClickEdit() {
 
+    this.router.navigate(['editAlbum/' + this.album.uid])
+  }
+  onClickAlbum() {
+  }
 }

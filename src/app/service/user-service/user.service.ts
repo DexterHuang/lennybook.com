@@ -1,3 +1,4 @@
+import { ThreadHelper } from './../ThreadHelper/ThreadHelper';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { User } from 'app/Model/User';
@@ -7,7 +8,6 @@ export class UserService {
   currentUser: User;
   initiated = false;
   constructor() {
-
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.currentFirebaseUser = user;

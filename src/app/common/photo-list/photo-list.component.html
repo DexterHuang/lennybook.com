@@ -1,0 +1,12 @@
+<div class="container">
+  <h4>Photos</h4>
+  <div class="row">
+    <div class="col s12 m4 l6" *ngFor="let photo of photos">
+      <app-photo-list-item [photo]="photo"
+        [showSetting]="showSetting"
+        [coverPhoto]="coverPhoto"
+        (clickRemove)="onClickRemove($event)"
+        (clickSetCover)="onClickSetCover($event)"></app-photo-list-item>
+    </div>
+  </div>
+</div>

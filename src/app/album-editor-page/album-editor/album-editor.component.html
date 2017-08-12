@@ -1,19 +1,18 @@
-<div class="card blue-grey darken-1">
+<div *ngIf="album" class="card blue-grey darken-1">
   <div class="card-content white-text">
-    <span class="card-title">New Album</span>
-    <form action="">
-      <div class="input-field col s12 l6">
-        <input type="text" id="album_name"
-          class="validate" required>
-        <label for="album_name">Album Name</label>
-      </div>
-      <div class="input-field col s12 l6">
-        <textarea type="text" id="description"
-          class="materialize-textarea"
-          required></textarea>
-        <label for="description">Description</label>
-      </div>
-    </form>
+    <span class="card-title">{{album.displayName}}</span>
+    <div class="input-field col s12 l6">
+      <input type="text" id="album_name"
+        class="validate active" required
+        [(ngModel)]="album.displayName">
+      <label for="album_name" class="active">Album Name</label>
+    </div>
+    <div class="input-field col s12 l6">
+      <textarea type="text" id="description"
+        class="materialize-textarea"
+        required [(ngModel)]="album.description"></textarea>
+      <label for="description" class="active">Description</label>
+    </div>
 
     <div ng2FileDrop class="custom-component-drop-zone blue-grey darken-2 z-depth-2"
       [ng2FileDropAcceptMultiple]="true"
@@ -22,10 +21,25 @@
       (ng2FileDropFilesDropped)="dragFilesDropped($event)">
       Drop Files Here
     </div>
+    <app-pending-photo-list *ngIf="pendingPhotos && pendingPhotos.length > 0"
+      [pendingPhotos]="pendingPhotos"
+      (clickItem)="onClickPendingPhoto($event)"></app-pending-photo-list>
+    <app-photo-list [photos]="album.photos"
+      [showSetting]="true" [coverPhoto]="album.coverPhoto"
+      (clickRemove)="onClickRemove($event)"
+      (clickSetCover)="onClickSetCover($event)"></app-photo-list>
+
   </div>
   <div class="card-action">
-    <a (click)="onClickSave()" class="right"
-      href="#" class="waves-effect waves-light btn">
-      <i class="material-icons left">save</i>Save</a>
+    <button *ngIf="loadingMessage === ''"
+      (click)="onClickSave()" class="right"
+      class="waves-effect waves-light btn">
+      <i class="material-icons left">save</i>Save</button>
+    <div *ngIf="loadingMessage !== ''">
+      <p>{{loadingMessage}}</p>
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
   </div>
 </div>

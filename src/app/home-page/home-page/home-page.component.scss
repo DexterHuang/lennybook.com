@@ -6,6 +6,13 @@
     stroke: 10px;
     margin:auto;
     text-align: center;
+    .title{
+        font-size: 80px;
+        letter-spacing: 7px;
+    }
+    .subtitle{
+        font-size: 20px;
+    }
 }
 .parallax-container {
       height: 100vh;

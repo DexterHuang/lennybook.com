@@ -1,9 +1,9 @@
 <div class="wideScreen" *ngIf="siteConfig.ready()">
   <div class="parallax-container valign-wrapper fullsize">
     <div materialize="parallax" class="parallax">
-      <!-- <img src="{{siteConfig.siteConfig.coverBackgroudPhoto}}"> -->
-      <video src="https://player.vimeo.com/external/181445574.hd.mp4?s=d24f32d879305e931468d55e4d7ce6efb5a95c39&amp;profile_id=119"
-        autoplay loop playsinline></video>
+      <img class="home-img" src="{{siteConfig.siteConfig.coverBackgroudPhoto}}">
+      <!-- <video src="https://player.vimeo.com/external/181445574.hd.mp4?s=d24f32d879305e931468d55e4d7ce6efb5a95c39&amp;profile_id=119"
+        autoplay loop playsinline></video> -->
     </div>
     <div class="logo">
       <h1 class="title">LENNYBOOK</h1>
@@ -27,7 +27,8 @@
   </div>
 
   <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto1"
-    [overlay]=siteConfig.siteConfig.featuredOverLay1></app-photo-section>
+    [overlay]=siteConfig.siteConfig.featuredOverLay1
+    [navigateTo]="'album/-KrGf0aToLtXu04KpEGh'"></app-photo-section>
 
   <div class="container text-section valign-wrapper">
     <div class="container">

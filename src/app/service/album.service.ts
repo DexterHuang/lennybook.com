@@ -35,4 +35,7 @@ export class AlbumService {
     })
     return result;
   }
+  removeAlbum(uid: string) {
+    return firebase.database().ref('albums/' + uid).remove();
+  }
 }

@@ -7,7 +7,8 @@
   </div>
 </a> -->
 <div class="card">
-  <div class="card-image waves-effect waves-block waves-light">
+  <div *ngIf="this.album.coverPhoto"
+    class="card-image waves-effect waves-block waves-light">
     <img class="activator" src="{{album.coverPhoto.photoUrl}}">
   </div>
   <div class="card-content">

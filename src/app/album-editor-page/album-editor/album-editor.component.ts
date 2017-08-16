@@ -29,6 +29,9 @@ export class AlbumEditorComponent implements OnInit {
   onClickSave() {
 
     this.loadingMessage = 'Uploading images, please wait...'
+    if (!this.album.coverPhoto && this.album.getPhotos().length > 0) {
+      this.album.coverPhoto = this.album.getPhotos()[0];
+    }
     const promises: Promise<{}>[] = [];
     this.pendingPhotos.forEach((pp: PendingPhoto) => {
       promises.push(pp.upload())
@@ -96,5 +99,10 @@ export class AlbumEditorComponent implements OnInit {
   }
   onClickSetCover(photo: Photo) {
     this.album.coverPhoto = photo;
+  }
+  onClickDelete() {
+    this.albumService.removeAlbum(this.album.uid).then(e => {
+      this.router.navigate(['home'])
+    });
   }
 }

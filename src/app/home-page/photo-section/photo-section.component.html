@@ -1,7 +1,7 @@
-<div class="parallax-container valign-wrapper"
-  [style.height]="height">
+<div (click)="onClick()" class="parallax-container valign-wrapper"
+  [style.height]="height" [style.cursor]="navigateTo? 'pointer' : 'default'">
   <div materialize="parallax" class="parallax">
-    <img src="{{photoURL}}">
+    <img class="image" src="{{photoURL}}">
   </div>
   <div class="overlayText">
     <h1>{{overlay}}

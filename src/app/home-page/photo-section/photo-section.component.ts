@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,9 +10,14 @@ export class PhotoSectionComponent implements OnInit {
   @Input() photoURL;
   @Input() overlay;
   @Input() height = '500px'
-  constructor() { }
+  @Input() navigateTo;
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  onClick() {
+    if (this.navigateTo) {
+      this.router.navigate([this.navigateTo]);
+    }
+  }
 }

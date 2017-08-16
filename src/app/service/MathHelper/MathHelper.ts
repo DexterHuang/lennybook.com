@@ -8,4 +8,12 @@ export class MathHelper {
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
             s4() + '-' + s4() + s4() + s4();
     }
+    public static getShortRandomID(length = 10) {
+        const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let result = '';
+        for (let i = length; i > 0; --i) {
+            result += chars[Math.floor(Math.random() * chars.length)]
+        };
+        return result;
+    }
 }

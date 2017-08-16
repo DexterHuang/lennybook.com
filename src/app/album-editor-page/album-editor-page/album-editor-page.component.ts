@@ -20,7 +20,7 @@ export class AlbumEditorPageComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.threadHelper.waitForUserService(() => {
+      this.threadHelper.waitForServices(() => {
         const uid = params['uid'];
         if (uid === 'new') {
           if (this.userService.isAdmin()) {

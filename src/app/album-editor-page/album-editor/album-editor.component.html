@@ -13,7 +13,24 @@
         required [(ngModel)]="album.description"></textarea>
       <label for="description" class="active">Description</label>
     </div>
-
+    <p>
+      <input type="checkbox" class="filled-in"
+        id="gallery" [(ngModel)]="album.showInGallery"
+      />
+      <label for="gallery">Show in Gallery</label>
+    </p>
+    <p>
+      <input type="checkbox" class="filled-in"
+        id="shop" [(ngModel)]="album.showInShop"
+      />
+      <label for="shop">Show in Shop</label>
+    </p>
+    <!--IF IS SHOP  -->
+    <div *ngIf="album.showInShop">
+      <input type="number" id="price"
+        required />
+      <label for="price">Price</label>
+    </div>
     <div ng2FileDrop class="custom-component-drop-zone blue-grey darken-2 z-depth-2"
       [ng2FileDropAcceptMultiple]="true"
       (ng2FileDropHoverStart)="dragFileOverStart()"

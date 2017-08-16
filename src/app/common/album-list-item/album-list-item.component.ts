@@ -15,9 +15,11 @@ export class AlbumListItemComponent implements OnInit {
   ngOnInit() {
   }
   onClickEdit() {
-
     this.router.navigate(['editAlbum/' + this.album.uid])
   }
   onClickAlbum() {
+  }
+  onClickOpen() {
+    this.router.navigate(['album/' + this.album.uid])
   }
 }

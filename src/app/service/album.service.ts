@@ -5,6 +5,7 @@ import * as firebase from 'firebase';
 @Injectable()
 export class AlbumService {
   albums: Album[] = []
+  initiated = false;
   constructor() {
     firebase.database().ref('albums').on('value', e => {
       if (e.exists()) {
@@ -15,6 +16,7 @@ export class AlbumService {
           Object.assign(a, o[key]);
           this.albums.push(a);
         });
+        this.initiated = true;
       }
     })
   }
@@ -26,6 +28,7 @@ export class AlbumService {
   getAlbum(uid: string): Album {
     let result = null;
     this.albums.forEach(a => {
+      console.log(uid, a.uid)
       if (a.uid === uid) {
         result = a;
       }

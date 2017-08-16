@@ -1,3 +1,27 @@
-<div class="container">
-  works
+<div *ngIf="album">
+  <app-photo-section [overlay]="album.displayName"
+    [photoURL]="album.coverPhoto.photoUrl"></app-photo-section>
+  <div class="text-section valign-wrapper">
+    <div class="container">
+      <div class="row">
+        <p>{{album.description}}</p>
+      </div>
+    </div>
+  </div>
+  <a class="waves-effect waves-light btn"
+    (click)="animate()">Button</a>
+  <div class="row photos">
+    <ul>
+      <div *ngFor="let photo of album.getPhotos()">
+        <li>
+          <div class="col s12 m4 l3">
+            <img materialize="materialbox"
+              class="responsive-img materialboxed fade-photo"
+              src="{{photo.photoUrl}}"
+              id="a{{album.getPhotos().indexOf(photo)}}}">
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
 </div>

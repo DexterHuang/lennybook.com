@@ -5,6 +5,9 @@ export class Album {
     description: string;
     uid: string;
     coverPhoto: Photo;
+    showInGallery = true;
+    showInShop = false;
+    price = 10;
     getPhotos() {
         if (this.photos.length > 0) {
             if (this.photos[0] instanceof Photo === false) {

@@ -11,11 +11,31 @@
     </div>
   </div>
 
+  <div class="container text-section valign-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6">
+          <img class="responsive-img" src="{{siteConfig.getConfig('myProfilePhoto')}}">
+        </div>
+        <div class="col s12 m6 l6  ">
+          <p>Hello, I am Ren Ishimaru</p>
+          <p>I like big butts and
+            i cannot lie!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto1"
     [overlay]=siteConfig.siteConfig.featuredOverLay1></app-photo-section>
 
   <div class="container text-section valign-wrapper">
-    <p>{{siteConfig.siteConfig.textSection1}}</p>
+    <div class="container">
+      <div class="row">
+        <p><strong>"Best photographer in the whole galaxy"</strong></p>
+        <p>-Darth Vader, 2017</p>
+      </div>
+    </div>
   </div>
 
   <app-photo-section [photoURL]="siteConfig.siteConfig.featuredPhoto2"

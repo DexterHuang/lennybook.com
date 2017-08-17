@@ -1,3 +1,4 @@
+import { Album } from './../../Model/Album';
 import { Photo } from './../../Model/Photo';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./photo-list.component.scss']
 })
 export class PhotoListComponent implements OnInit {
-  @Input() photos: Photo[] = [];
+  @Input() photos: Photo[]
   @Input() showSetting = false;
   @Input() coverPhoto: Photo;
   @Output() clickRemove = new EventEmitter<Photo>();
@@ -15,6 +16,12 @@ export class PhotoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  getPhotos() {
+    if (this.photos) {
+      return this.photos;
+    }
+    return [];
   }
   onClickRemove(photo: Photo) {
     this.clickRemove.emit(photo);

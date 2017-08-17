@@ -1,3 +1,4 @@
+import { Photo } from './../Model/Photo';
 import { Album } from './../Model/Album';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
@@ -35,7 +36,23 @@ export class AlbumService {
     })
     return result;
   }
-  removeAlbum(uid: string) {
-    return firebase.database().ref('albums/' + uid).remove();
+  async removeAlbum(uid: string) {
+    const album: Album = new Album();
+    const photos: Photo[] = []
+    const ref = firebase.database().ref('albums/' + uid);
+    await ref.once('value', e => {
+      if (e.exists()) {
+        const o = e.val();
+        Object.assign(album, o);
+        album.getPhotos().forEach(photo => {
+          photos.push(photo);
+        })
+      }
+    })
+    for (const photo of photos) {
+      await firebase.storage().refFromURL(photo.photoUrl).delete().then();
+    }
+
+    await ref.remove();
   }
 }

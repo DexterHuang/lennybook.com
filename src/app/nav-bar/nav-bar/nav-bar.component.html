@@ -1,12 +1,15 @@
 <nav class="nav z-depth-0">
   <div class="nav-wrapper">
-    <span class="brand-logo left">Lennybook</span>
+    <span class="brand-logo left" (click)="onClickLogo()">Lennybook
+      </span>
     <span materialize="sideNav" data-activates="mobile-demo"
       class="button-collapse hide-on-med-and-up right">
       <i class="material-icons">menu</i>
     </span>
-    <ul class="right hide-on-small-and-down">
+    <ul class="right  front hide-on-small-and-down">
       <li> <a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li> <a routerLink="/gallery"
+          routerLinkActive="active">Gallery</a></li>
       <li> <a routerLink="/shop" routerLinkActive="active">Shop</a></li>
       <li *ngIf="!userService.isLogedin()">
         <a routerLink="/login" routerLinkActive="active">Login</a></li>
@@ -14,9 +17,12 @@
         <a (click)="onClickLogOut()">Logout</a></li>
       <li *ngIf="userService.isAdmin()">
         <a routerLink="admin" routerLinkActive="active">Admin</a></li>
+
     </ul>
-    <ul class="side-nav" id="mobile-demo">
+    <ul class="side-nav front" id="mobile-demo">
       <li> <a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li> <a routerLink="/gallery"
+          routerLinkActive="active">Gallery</a></li>
       <li> <a routerLink="/shop" routerLinkActive="active">Shop</a></li>
       <li *ngIf="!userService.isLogedin()">
         <a routerLink="/login" routerLinkActive="active">Login</a></li>

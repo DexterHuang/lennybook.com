@@ -1,5 +1,11 @@
 .nav{
-  z-index: 1;
   position: absolute;
   background-color: rgba(0,0,0,0);
+  
+}
+.brand-logo{
+  cursor: pointer;
+}
+router-outlet{
+  z-index:  -100;
 }

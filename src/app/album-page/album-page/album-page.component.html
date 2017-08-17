@@ -8,8 +8,6 @@
       </div>
     </div>
   </div>
-  <a class="waves-effect waves-light btn"
-    (click)="animate()">Button</a>
   <div class="row photos">
     <ul>
       <div *ngFor="let photo of album.getPhotos()">
@@ -23,5 +21,12 @@
         </li>
       </div>
     </ul>
+  </div>
+  <div *ngIf="userService.isAdmin()"
+    class="edit-button">
+    <a class="btn-floating btn-large waves-effect waves-light red"
+      (click)="onClickEdit()">
+          <i class="material-icons">edit</i>
+        </a>
   </div>
 </div>

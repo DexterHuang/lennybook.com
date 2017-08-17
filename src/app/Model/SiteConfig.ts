@@ -7,6 +7,7 @@ export class SiteConfig {
     featuredPhoto3 = 'notSet';
     featuredOverLay3 = '';
 
+    galleryPageTopPhoto = 'notSet';
     shopPageTopPhoto = 'notSet';
     loginPageTopPhoto = 'notSet';
     myProfilePhoto = 'notSet';

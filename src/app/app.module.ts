@@ -32,6 +32,8 @@ import { AlbumPageComponent } from './album-page/album-page/album-page.component
 import { FormsModule } from '@angular/forms';
 import { SiteConfigComponent } from './admin-page/site-config/site-config.component';
 import { PhotoSectionComponent } from './home-page/photo-section/photo-section.component';
+import { BrandLogoComponent } from './home-page/brand-logo/brand-logo.component';
+import { GalleryPageComponent } from './gallery-page/gallery-page/gallery-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +54,8 @@ import { PhotoSectionComponent } from './home-page/photo-section/photo-section.c
     AlbumPageComponent,
     SiteConfigComponent,
     PhotoSectionComponent,
+    BrandLogoComponent,
+    GalleryPageComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MdDialogModule, Ng2ImgMaxModule,

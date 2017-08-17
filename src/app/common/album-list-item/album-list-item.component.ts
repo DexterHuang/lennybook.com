@@ -20,6 +20,12 @@ export class AlbumListItemComponent implements OnInit {
   onClickAlbum() {
   }
   onClickOpen() {
-    this.router.navigate(['album/' + this.album.uid])
+    if (!this.album.showInShop || this.userService.isAdmin()) {
+      this.router.navigate(['album/' + this.album.uid])
+
+    }
+  }
+  onClickShop() {
+    this.router.navigate(['buy/' + this.album.uid])
   }
 }

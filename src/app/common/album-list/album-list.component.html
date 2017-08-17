@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <app-album-list-item class="col s12 m6 l4"
-      *ngFor="let album of albumService.albums"
+      *ngFor="let album of getAlbums()"
       [album]="album"></app-album-list-item>
   </div>
   <a *ngIf="userService.isAdmin()"

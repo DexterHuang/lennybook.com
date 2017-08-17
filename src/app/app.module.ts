@@ -34,6 +34,7 @@ import { SiteConfigComponent } from './admin-page/site-config/site-config.compon
 import { PhotoSectionComponent } from './home-page/photo-section/photo-section.component';
 import { BrandLogoComponent } from './home-page/brand-logo/brand-logo.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page/gallery-page.component';
+import { BuyPageComponent } from './buy-page/buy-page/buy-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { GalleryPageComponent } from './gallery-page/gallery-page/gallery-page.c
     PhotoSectionComponent,
     BrandLogoComponent,
     GalleryPageComponent,
+    BuyPageComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MdDialogModule, Ng2ImgMaxModule,

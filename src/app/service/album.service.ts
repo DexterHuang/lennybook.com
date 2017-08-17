@@ -29,7 +29,6 @@ export class AlbumService {
   getAlbum(uid: string): Album {
     let result = null;
     this.albums.forEach(a => {
-      console.log(uid, a.uid)
       if (a.uid === uid) {
         result = a;
       }

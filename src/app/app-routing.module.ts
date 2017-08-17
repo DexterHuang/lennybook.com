@@ -1,3 +1,4 @@
+import { BuyPageComponent } from './buy-page/buy-page/buy-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page/gallery-page.component';
 import { AlbumPageComponent } from './album-page/album-page/album-page.component';
 import { AlbumEditorPageComponent } from './album-editor-page/album-editor-page/album-editor-page.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminPageComponent },
   { path: 'editAlbum/:uid', component: AlbumEditorPageComponent },
   { path: 'album/:uid', component: AlbumPageComponent },
-  { path: 'gallery', component: GalleryPageComponent }
+  { path: 'gallery', component: GalleryPageComponent },
+  { path: 'buy/:uid', component: BuyPageComponent }
 ];
 
 @NgModule({

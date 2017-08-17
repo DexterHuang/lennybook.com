@@ -1,0 +1,10 @@
+<div *ngIf="album">
+  <app-photo-section [overlay]="album.displayName"
+    [photoURL]="album.coverPhoto.photoUrl"></app-photo-section>
+
+  <div class="container">
+    <h1>Download the full album for
+      only {{album.price}} yen!</h1>
+
+  </div>
+</div>
